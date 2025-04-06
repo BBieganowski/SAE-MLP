@@ -1,0 +1,4 @@
+python data_download.py
+python fractional_differentiation.py
+python triple_barrier_labeling.py
+python train_model.py
