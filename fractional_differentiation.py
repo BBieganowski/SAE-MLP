@@ -15,9 +15,9 @@ logging.basicConfig(
 DB_PATH = "database/crypto_data.db"
 SOURCE_TABLE = "candles_5m"
 TARGET_TABLE = "candles_5m_fracdiff"
-ASSETS = ["ETHUSDT", "BTCUSDT", "LTCUSDT"]
+ASSETS = ["ETHUSDT", "BTCUSDT", "LTCUSDT", 'ES', 'GC', 'HG', 'NG', 'M6E', 'CL']
 ADF_PVALUE_THRESHOLD = 0.01  
-OPTUNA_N_TRIALS = 5  
+OPTUNA_N_TRIALS = 10  
 FRACDIFF_THRESHOLD = 1e-4  
 MAX_D_ORDER = 1.5  
 

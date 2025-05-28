@@ -13,19 +13,14 @@ logging.basicConfig(
     level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
 )
 
-
 ASSETS = ["ETHUSDT", "BTCUSDT", "LTCUSDT"]
 INTERVAL = AsyncClient.KLINE_INTERVAL_5MINUTE
 DB_PATH = "database/crypto_data.db"
 TABLE_NAME = "candles_5m"
-DAYS_TO_FETCH = 365  
-
 
 os.makedirs(os.path.dirname(DB_PATH), exist_ok=True)
 
-
 con = duckdb.connect(DB_PATH)
-
 
 con.execute(
     f"""
@@ -216,11 +211,10 @@ async def main():
 
     
     
-    today_utc = datetime.utcnow().date()
-    end_date = datetime(today_utc.year, today_utc.month, today_utc.day, tzinfo=None)
+    end_date = datetime(2022, 5, 24, tzinfo=None)
 
     
-    start_date = end_date - timedelta(days=DAYS_TO_FETCH)
+    start_date = datetime(2016, 1, 1, tzinfo=None)
     start_str = start_date.strftime("%Y-%m-%d %H:%M:%S")
 
     tasks = []

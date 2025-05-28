@@ -13,12 +13,12 @@ logging.basicConfig(
 DB_PATH = "database/crypto_data.db"
 SOURCE_TABLE = "candles_5m"
 TARGET_TABLE = "candles_5m_labels"
-ASSETS = ["ETHUSDT", "BTCUSDT", "LTCUSDT"]
+ASSETS = ["BTCUSDT", "ES", "M6E"]
 
 
 
-WINDOW_DURATION_MINUTES = 15  
-BARRIER_LAMBDA = 0.001  
+WINDOW_DURATION_MINUTES = 15
+BARRIER_LAMBDA = 0.002  
 
 
 

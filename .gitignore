@@ -1,2 +1,21 @@
-.venv
+# big files
 database/crypto_data.db
+commodity_data/
+commodity_dataset/
+
+# no need to track
+venv
+*.csv
+*.keras
+*.ipynb
+*.db
+.env
+__pycache__/
+
+# playground scripts
+bb.py
+bb_example.py
+dc.py
+data_cleanup.py
+load_commodity_parquet.py
+todo.md
